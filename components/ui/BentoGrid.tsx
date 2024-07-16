@@ -1,14 +1,14 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
 import { cn } from "@/lib/utils";
-
-import animationData from "@/data/confetti.json";
+import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import { FaDownload } from "react-icons/fa6";
-import Lottie from "react-lottie";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
-import MagicButton from "./MagicButton";
+
+const MagicButton = dynamic(() => import("./MagicButton"), { ssr: false });
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
 export const BentoGrid = ({
   className,
@@ -53,15 +53,6 @@ export const BentoGridItem = ({
 
   const [downloaded, setDownloaded] = useState(false);
 
-  const defaultOptions = {
-    loop: downloaded,
-    autoplay: downloaded,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-
   const handleResumeDownload = () => {
     window.location.href =
       "https://drive.google.com/uc?export=download&id=1esQxMVdlezqnCYCpSaN3SFzrFQFZh8_6";
@@ -69,9 +60,12 @@ export const BentoGridItem = ({
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      setDownloaded(false);
-    }, 5000);
+    if (downloaded) {
+      const timer = setTimeout(() => {
+        setDownloaded(false);
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
   }, [downloaded]);
 
   return (
@@ -162,14 +156,6 @@ export const BentoGridItem = ({
           )}
           {id === 6 && (
             <div className="mt-5 relative">
-              <div
-                className={`absolute -bottom-5 right-0 ${
-                  downloaded ? "block" : "block"
-                }`}
-              >
-                <Lottie options={defaultOptions} height={200} width={400} />
-              </div>
-
               <MagicButton
                 title={downloaded ? "Success!" : "Download my Resume"}
                 icon={<FaDownload />}
