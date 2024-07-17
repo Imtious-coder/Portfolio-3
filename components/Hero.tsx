@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="sm:pb-20 pt-20 sm:pt-36">
+    <div className="lg:pb-20 pt-20 lg:pt-36">
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
