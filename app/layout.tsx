@@ -1,3 +1,5 @@
+import { FloatingNav } from "@/components/ui/FloatingNavbar";
+import { navItems } from "@/data";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -24,6 +26,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <FloatingNav navItems={navItems} />
           {children}
         </ThemeProvider>
       </body>
