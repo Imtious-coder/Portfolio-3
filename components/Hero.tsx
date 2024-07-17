@@ -2,10 +2,11 @@ import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./ui/MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
+import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36">
+    <div className="sm:pb-20 pt-20 sm:pt-36">
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -29,21 +30,23 @@ const Hero = () => {
           </p>
 
           <TextGenerateEffect
-            words="Successfully Led Numerous Projects Over The Years. Interested in exploring their impact?"
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
+            words="Specializing in problem-solving and building web applications."
+            // words="Successfully Led Numerous Projects Over The Years. Interested in exploring their impact?"
+            className="text-center text-[30px] md:text-5xl lg:text-6xl"
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m Imtious Islam👋 A Web Developer based in Bangladesh.
+            Hi! I&apos;m Imtious Islam👋 A Software Engineer based in
+            Bangladesh.
           </p>
 
-          <a href="#about">
+          <Link href="/projects">
             <MagicButton
               title="Show my work"
               icon={<FaLocationArrow />}
               position="right"
             />
-          </a>
+          </Link>
         </div>
       </div>
     </div>
