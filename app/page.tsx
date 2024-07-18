@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import RecentProjects from "@/components/RecentProjects";
-import Reviews from "@/components/Reviews";
 
 export default function Home() {
   return (
