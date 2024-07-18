@@ -1,21 +1,12 @@
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { navItems } from "@/data";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import ReactGA from "react-ga4";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 
 const inter = Inter({ subsets: ["latin"] });
-
-// GA4
-const GA4_ID = "G-FSF4B3VE9V";
-ReactGA.initialize(GA4_ID);
-ReactGA.send({
-  hitType: "pageview",
-  page: window.location.pathname,
-  title: "Portfolio",
-});
 
 export const metadata: Metadata = {
   title: "Imtious's Portfolio | Home",
@@ -40,6 +31,7 @@ export default function RootLayout({
           {children}
         </ThemeProvider>
       </body>
+      <GoogleAnalytics gaId="G-FSF4B3VE9V" />
     </html>
   );
 }
