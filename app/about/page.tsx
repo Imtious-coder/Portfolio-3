@@ -2,6 +2,7 @@
 "use client";
 import { experiences, skills } from "@/data/data";
 import Head from "next/head";
+import { CustomChat, FacebookProvider } from "react-facebook";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -14,7 +15,11 @@ export default function page() {
     <section className="max-container bg-[#F5F7F9]">
       <Head>
         <title>About</title>
+        <meta property="og:title" content="About Page" key="title" />
       </Head>
+      <FacebookProvider appId="25114531961494347" chatSupport>
+        <CustomChat pageId="111433384149681" minimized={true} />
+      </FacebookProvider>
       <h1 className="head-text">
         Hello, I&apos;m{" "}
         <span className="blue-gradient_text font-semibold drop-shadow">
