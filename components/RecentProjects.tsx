@@ -13,7 +13,7 @@ const RecentProjects = () => {
         A small selection of{" "}
         <span className="text-purple">recent projects</span>
       </h1>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-10 mt-10">
+      <div className="flex flex-wrap items-center justify-center sm:p-4 gap-10 mt-10">
         {projectData.map(
           ({ name, description, fullImage, website, type, code }, index) => (
             <CardContainer key={index} className="inter-var">
