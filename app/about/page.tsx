@@ -1,5 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { experiences, skills } from "@/data/data";
+import Head from "next/head";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -10,6 +12,9 @@ import "react-vertical-timeline-component/style.min.css";
 export default function page() {
   return (
     <section className="max-container bg-[#F5F7F9]">
+      <Head>
+        <title>About</title>
+      </Head>
       <h1 className="head-text">
         Hello, I&apos;m{" "}
         <span className="blue-gradient_text font-semibold drop-shadow">
