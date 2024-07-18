@@ -1,8 +1,8 @@
+import Link from "next/link";
 import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./ui/MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
-import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -30,7 +30,7 @@ const Hero = () => {
           </p>
 
           <TextGenerateEffect
-            words="Specializing in problem-solving and building web applications."
+            words="Specializing in Problem Solving & Building Web Applications."
             // words="Successfully Led Numerous Projects Over The Years. Interested in exploring their impact?"
             className="text-center text-[30px] md:text-5xl lg:text-6xl"
           />
@@ -40,7 +40,7 @@ const Hero = () => {
             Bangladesh.
           </p>
 
-          <Link href="/projects">
+          <Link href="#projects">
             <MagicButton
               title="Show my work"
               icon={<FaLocationArrow />}

@@ -90,6 +90,12 @@
 
 body {
   font-family: "Work Sans", sans-serif;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 body:has(.card[data-color="blue"]:hover) {
@@ -109,7 +115,7 @@ body:has(.card[data-color="green"]:hover) {
     background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
   }
   .max-container {
-    @apply mx-auto sm:p-16 pb-12 !pt-[126px] px-8 md:px-16 min-h-[calc(100vh-80px)];
+    @apply mx-auto sm:p-16 pb-12 !pt-[126px] px-8 md:px-48 min-h-[calc(100vh-80px)];
   }
 
   .head-text {
