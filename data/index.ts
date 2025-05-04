@@ -174,30 +174,37 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Developer",
-    desc: "Managed a user base exceeding 2 thousand users and handled over 23 million data points monthly.",
+    title: "Senior Software Engineer",
+    desc: "Developed interactive 3D web applications using Three.js, integrating complex 3D models and animations to create an immersive user experience and enhance engagement on the platform.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Frontend Web Developer",
-    desc: "Spearheaded the development and successful launch of IntelSense AI's business websites, establishing a strong online presence from inception.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "Frontend Developer",
+    desc: "Managed a user base exceeding 2 thousand users and handled over 23 million data points monthly.",
+    className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
-    title: "Web Developer",
-    desc: "Leveraging my expertise, I've developed captivating and functional online stores tailored to clients' unique needs.",
-    className: "md:col-span-2",
+    title: "Frontend Web Developer",
+    desc: "Spearheaded the development and successful launch of IntelSense AI's business websites, establishing a strong online presence from inception.",
+    className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
-    title: "Junior Software Engineer",
-    desc: "Employed a potent blend of JavaScript, Node.js, and React.js to deliver dynamic and engaging user experiences.",
+    title: "Web Developer",
+    desc: "Leveraging my expertise, I've developed captivating and functional online stores tailored to clients' unique needs.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },
+  // {
+  //   id: 4,
+  //   title: "Junior Software Engineer",
+  //   desc: "Employed a potent blend of JavaScript, Node.js, and React.js to deliver dynamic and engaging user experiences.",
+  //   className: "md:col-span-2",
+  //   thumbnail: "/exp4.svg",
+  // },
 ];

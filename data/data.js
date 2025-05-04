@@ -93,6 +93,20 @@ export const skills = [
 
 export const experiences = [
   {
+    title: "Senior Software Engineer",
+    company_name: "Desh IT.",
+    icon: "/DESHIT_LOGO.png",
+    iconBg: "#A2C6A3",
+    date: "May 2023 - Dec 2023",
+    points: [
+      "Architected and optimized the MySQL database for scalability, achieving 40% faster data access.",
+      "Led backend team with Node.js and Express.js to optimize system efficiency, improving API performance by 30%.",
+      "Developed interactive 3D web applications using Three.js, integrating complex 3D models and animations to create an immersive user experience and enhance engagement on the platform.",
+      "Implemented security best practices in APIs, ensuring data protection and passing security reviews.",
+      "Collaborated with agile teams to align development efforts, accelerate feature delivery, and maintain code quality",
+    ],
+  },
+  {
     title: "Frontend Developer",
     company_name: "Bondstein©️ Technologies Ltd.",
     icon: "/bondstein.png",
@@ -187,7 +201,7 @@ export const projectData = [
     name: "Infinitrix.",
     type: "Full Stack",
     description: "Dynamic web app for AI-based startups. 📱",
-    website: "https://infinitrix.netlify.app/",
+    website: "https://infinitrixs.netlify.app/",
     image: "https://i.ibb.co/C6H70yy/website-Image.png",
     fullImage: "https://i.ibb.co/C6H70yy/website-Image.png",
     // admin: "https://market-admin.netlify.app/",
